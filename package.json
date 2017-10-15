@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Krzysztof Miąsko <kmiasko@gmail.com> (http://kmiasko.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "node-tweet-stream": "^2.0.1",
+    "node-twitter-api": "^1.8.0",
+    "oauth": "^0.9.15",
+    "socket.io": "^2.0.3",
+    "twit": "^2.2.9"
+  }
+}
