@@ -34,8 +34,6 @@ const tweetTrack = (req, res, next) => {
     io.emit(word, tweet);
   });
 
-  console.log(streams);
-
   res.status(200).send({});
   return next();
 }
@@ -50,8 +48,6 @@ const tweetUntrack = (req, res, next) => {
   streams[word].stop();
   delete streams[word];
 
-  console.log(streams);
-
   res.status(200).send({});
   return next();
 }
@@ -60,7 +56,6 @@ io.on('connection', (sock) => {
   sock.on('disconnect', () => Object.keys(streams).forEach(key => {
     streams[key].stop();
     delete streams[key];
-    console.log(streams);
   }));
 })
 
